@@ -24,8 +24,10 @@ configure_file(Game/GameConfig.hpp.in GameConfig.hpp)
 # Find modules in the Engine folder and add them as a subdirectory
 cosine_find_and_add_subdirectory(dirlist ${CMAKE_SOURCE_DIR} "Engine/*")
 
+add_subdirectory(Game/)
+
 # add the executable
-add_executable(${GAME_NAME} Game/Main.cpp)
+#add_executable(${GAME_NAME} Game/Main.cpp)
 
 # Link the libraries
 foreach (dir ${dirlist})
