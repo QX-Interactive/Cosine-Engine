@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.20)
-project(Cosine-Core)
+##########################################
+# Created by Bram Reuling
+##########################################
 
-message(STATUS "Adding Cosine-Core...")
+# Find the cpp files that make up this module.
+find_files(filelist ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
 
-find_files(filelist ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp" "*.hpp")
-
-foreach (file ${filelist})
-    message(STATUS "File in list: ${file}")
-endforeach ()
-
+# Create a static library
 add_library(Core ${filelist})
+
+# Add the this directory in the library
+target_include_directories(Core INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})

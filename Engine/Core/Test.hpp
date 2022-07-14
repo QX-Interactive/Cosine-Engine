@@ -1,4 +1,6 @@
-class Test{
-public:
-    static void TestFunction();
-};
+namespace Core{
+    class Test{
+    public:
+        static void TestFunction();
+    };
+}

@@ -1,8 +1,13 @@
 //
 // Created by Bram Reuling on 11/07/2022.
 //
+#include <iostream>
+#include "GameConfig.hpp"
+#include "Test.hpp"
 
-int main(int argc, char** argv)
+int main()
 {
+    std::cout << "Project Name: " << PROJECT_NAME << ", Version: " << PROJECT_VER << std::endl;
+    Core::Test::TestFunction();
     return 0;
 }
