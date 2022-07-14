@@ -54,7 +54,7 @@ if (DOXYGEN_FOUND)
             COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/docs_doxygen
             COMMENT "Generating API documentation with Doxygen"
-            VERBATIM)
+            ALL)
 else()
     message(STATUS "Doxygen needs to be installed!")
 endif ()
