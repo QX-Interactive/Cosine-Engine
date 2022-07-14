@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include "GameConfig.hpp"
-#include "Test.hpp"
+#include "Core/Test.hpp"
 
 int main()
 {

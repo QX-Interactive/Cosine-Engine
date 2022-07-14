@@ -24,8 +24,10 @@ configure_file(Game/GameConfig.hpp.in GameConfig.hpp)
 # Find modules in the Engine folder and add them as a subdirectory
 cosine_find_and_add_subdirectory(dirlist ${CMAKE_SOURCE_DIR} "Engine/*")
 
+add_subdirectory(Game/)
+
 # add the executable
-add_executable(${GAME_NAME} Game/Main.cpp)
+#add_executable(${GAME_NAME} Game/Main.cpp)
 
 # Link the libraries
 foreach (dir ${dirlist})
@@ -35,3 +37,24 @@ foreach (dir ${dirlist})
 endforeach ()
 
 target_include_directories(${GAME_NAME} PUBLIC "${PROJECT_BINARY_DIR}")
+
+# Doxygen
+
+# look for Doxygen package
+find_package(Doxygen)
+
+if (DOXYGEN_FOUND)
+    set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/docs_doxygen/Doxyfile.in)
+    set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile.out)
+
+    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT})
+    message(STATUS "Doxygen build started")
+
+    add_custom_target(Docs
+            COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/docs_doxygen
+            COMMENT "Generating API documentation with Doxygen"
+            ALL)
+else()
+    message(STATUS "Doxygen needs to be installed!")
+endif ()
