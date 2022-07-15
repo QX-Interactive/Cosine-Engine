@@ -3,5 +3,6 @@ namespace Core{
     public:
         static void TestFunction();
         static void AnotherTestFunction();
+        static int ReturnFive();
     };
 }
