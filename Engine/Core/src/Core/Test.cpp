@@ -14,4 +14,9 @@ namespace Core{
     {
         std::cout << "Hello from another function!" << std::endl;
     }
+
+    int Test::ReturnFive()
+    {
+        return 5;
+    }
 }
