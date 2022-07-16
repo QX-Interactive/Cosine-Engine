@@ -3,11 +3,9 @@
 //
 #include <iostream>
 #include "GameConfig.hpp"
-#include "Core/Test.hpp"
 
 int main()
 {
     std::cout << "Project Name: " << PROJECT_NAME << ", Version: " << PROJECT_VER << std::endl;
-    Core::Test::TestFunction();
     return 0;
 }
