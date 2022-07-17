@@ -5,7 +5,7 @@
 // This test should always pass otherwise something is really wrong with your system.
 TEST(GameObjectTests, CanCreateGameObject)
 {
-    Core::GameObject* gameObject = new Core::GameObject();
+    Cosine::Core::GameObject* gameObject = new Cosine::Core::GameObject();
 
     ASSERT_NE(gameObject, nullptr);
 }

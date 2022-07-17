@@ -4,10 +4,10 @@
 
 #include "GameObject.hpp"
 
-namespace Core {
+namespace Cosine::Core {
 
     GameObject::GameObject() = default;
 
     GameObject::~GameObject() = default;
 
-} // Core
+}
