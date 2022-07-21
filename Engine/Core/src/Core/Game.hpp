@@ -16,10 +16,6 @@ namespace Cosine::Core {
         virtual void Start();
         virtual void Update();
         virtual void OnDestroy();
-
-#ifdef COSINE_TESTS_ACTIVE
-        virtual int RunTests();
-#endif
     };
 
     // Defined in client.

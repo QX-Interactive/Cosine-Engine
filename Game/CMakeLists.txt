@@ -1,2 +1,3 @@
 find_files(filelist ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
-add_executable(${GAME_NAME} ${filelist})
+find_files(filelistHPP ${CMAKE_CURRENT_SOURCE_DIR} "*.hpp")
+add_executable(${GAME_NAME} ${filelist} ${filelistHPP})
