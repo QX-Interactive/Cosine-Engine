@@ -42,6 +42,7 @@ add_subdirectory(${CMAKE_BINARY_DIR}/googletest-src ${CMAKE_BINARY_DIR}/googlete
 cosine_find_and_add_subdirectory(dirlist ${CMAKE_SOURCE_DIR} "Engine/*")
 
 add_subdirectory(Game/)
+add_subdirectory(Tests/)
 
 # Link the libraries
 foreach (dir ${dirlist})

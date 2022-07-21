@@ -1,0 +1,1 @@
+Do not put your tests in this folder. This folder is used to store the tests to see if the test tools work and if the libraries are actually reachable.
